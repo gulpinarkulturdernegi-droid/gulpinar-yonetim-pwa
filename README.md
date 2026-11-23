@@ -1,13 +1,17 @@
 # Gülpınar Derneği PWA
 
-Bu sürüm, derneğin mevcut orijinal logosunu değiştirmeden kullanır:
-https://gulpinar-dernek.web.app/gulpinar-logo.png
+## GitHub Pages
+1. Bu ZIP dosyasının içeriğini `gulpinar-yonetim-pwa` deposunun ana dizinine yükleyin.
+2. GitHub deposunda Settings → Pages bölümüne girin.
+3. Build and deployment altında Deploy from a branch seçin.
+4. Branch: `main`, Folder: `/(root)` seçip Save'e basın.
+5. Site adresini açın: https://gulpinarkulturdernegi-droid.github.io/gulpinar-yonetim-pwa/
 
-## GitHub'a güncelleme
-1. Bu ZIP dosyasını açın.
-2. İçindeki `index.html`, `manifest.webmanifest` ve `sw.js` dosyalarını mevcut GitHub deposunun kök dizinine yükleyin.
-3. GitHub dosyaları değiştirmek için sorarsa **Replace** seçin.
-4. Commit changes yapın.
-5. GitHub Pages yayınını yenileyin. Tarayıcı önbelleği nedeniyle eski simge bir süre görünebilir.
+## Windows'a kurulum
+Siteyi Chrome veya Edge ile açın. Tarayıcı menüsünden "Uygulamayı yükle" / "Bu siteyi uygulama olarak yükle" seçeneğini kullanın.
 
-Uygulama Blogger sitesini ayrı sekmede açar; Blogger yönetim ekranlarını bu uygulamanın içine gömmez. Yönetim verileri GitHub'a kopyalanmaz.
+## Not
+- `icons/gulpinar-logo.png` yüklenen orijinal logodur; dosya değiştirilmeden pakete kopyalanmıştır.
+- `icon-192.png` ve `icon-512.png`, PWA kurulum simgeleri için orijinal logodan üretilmiş ölçekli kopyalardır.
+- Yönetim sistemi Blogger sitesini yeni sekmede açar. Blogger içeriği ve yönetim işlemleri internet bağlantısı gerektirir.
+- Depoya üye bilgileri, T.C. kimlik numaraları, şifreler veya API anahtarları koymayın.

@@ -2,55 +2,52 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#14532d">
-  <meta name="description" content="Gülpınar Derneği Bilgi ve Yönetim Sistemi uygulaması">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10264a">
+  <meta name="description" content="Gülpınar Kültür Dayanışma ve Yardımlaşma Derneği bilgi ve yönetim sistemi">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="https://gulpinar-dernek.web.app/gulpinar-logo.png">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
   <title>Gülpınar Derneği</title>
   <style>
-    *{box-sizing:border-box} body{margin:0;min-height:100vh;display:grid;place-items:center;
-    padding:24px;background:linear-gradient(145deg,#f0fdf4,#e2e8f0);font-family:Arial,sans-serif;color:#172554}
-    main{width:min(100%,460px);background:#fff;border-radius:24px;padding:34px 28px;text-align:center;
-    box-shadow:0 18px 55px #0f172a18}
-    .logo{width:150px;height:150px;object-fit:contain;border-radius:50%;background:#fff}
-    h1{font-size:24px;margin:18px 0 8px;color:#14532d}
-    p{line-height:1.55;color:#475569}
-    button,a.action{display:block;width:100%;border:0;border-radius:12px;padding:15px 18px;
-    font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;margin-top:14px}
-    .primary{background:#14532d;color:white} .secondary{background:#ecfdf5;color:#14532d}
-    #install{display:none} .note{font-size:12px;margin-top:22px;color:#64748b}
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      padding: 24px; color: #10264a;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(145deg, #f8f4eb, #e9e3d7);
+    }
+    main {
+      width: min(100%, 520px); text-align: center; padding: 30px 24px;
+      background: rgba(255,255,255,.88); border: 1px solid #d8c69b;
+      border-radius: 22px; box-shadow: 0 14px 40px rgba(16,38,74,.12);
+    }
+    .logo { display:block; width:min(78vw, 310px); height:auto; margin:0 auto 20px; }
+    h1 { font-size: clamp(21px, 5vw, 27px); margin: 8px 0; }
+    p { line-height:1.55; color:#4c5870; margin: 10px 0 24px; }
+    a {
+      display:inline-block; padding:15px 24px; border-radius:12px;
+      background:#10264a; color:white; text-decoration:none; font-weight:700;
+    }
+    a:focus, a:hover { background:#1d3b69; }
+    footer { margin-top:22px; font-size:12px; color:#7b8290; }
   </style>
 </head>
 <body>
-<main>
-  <img class="logo" src="https://gulpinar-dernek.web.app/gulpinar-logo.png" alt="Gülpınar Derneği orijinal logosu">
-  <h1>GÜLPINAR DERNEĞİ</h1>
-  <p>Bilgi ve Yönetim Sistemi</p>
-  <a class="action primary" href="https://gulpinarmahallesidernegi.blogspot.com/" target="_blank" rel="noopener">
-    Yönetim Sistemini Aç
-  </a>
-  <button id="install" class="secondary" type="button">Uygulamayı Bilgisayara Yükle</button>
-  <p class="note">Bu uygulama mevcut Blogger sisteminden bağımsızdır. Üye, aidat ve yönetim verileri bu pakette tutulmaz; mevcut sisteminiz açılır.</p>
-</main>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(console.error));
-  }
-  let installPrompt;
-  const installButton = document.getElementById("install");
-  window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    installPrompt = event;
-    installButton.style.display = "block";
-  });
-  installButton.addEventListener("click", async () => {
-    if (!installPrompt) return;
-    installPrompt.prompt();
-    await installPrompt.userChoice;
-    installPrompt = null;
-    installButton.style.display = "none";
-  });
-</script>
+  <main>
+    <img class="logo" src="./icons/gulpinar-logo.png" alt="Gülpınar Derneği logosu">
+    <h1>GÜLPINAR DERNEĞİ</h1>
+    <p>Kültür, Dayanışma ve Yardımlaşma Derneği<br>Bilgi ve Yönetim Sistemi</p>
+    <a href="https://gulpinarmahallesidernegi.blogspot.com/" target="_blank" rel="noopener">
+      Yönetim Sistemini Aç
+    </a>
+    <footer>Gülpınar Kültür Dayanışma ve Yardımlaşma Derneği</footer>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
