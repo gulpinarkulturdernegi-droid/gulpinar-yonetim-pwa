@@ -1,17 +1,22 @@
 # Gülpınar Derneği PWA
 
-## GitHub Pages
-1. Bu ZIP dosyasının içeriğini `gulpinar-yonetim-pwa` deposunun ana dizinine yükleyin.
-2. GitHub deposunda Settings → Pages bölümüne girin.
-3. Build and deployment altında Deploy from a branch seçin.
-4. Branch: `main`, Folder: `/(root)` seçip Save'e basın.
-5. Site adresini açın: https://gulpinarkulturdernegi-droid.github.io/gulpinar-yonetim-pwa/
+Bu paket, mevcut Blogger sitesine hiçbir dosya veya kod eklemeden ayrı bir PWA uygulama kabuğu oluşturur.
 
-## Windows'a kurulum
-Siteyi Chrome veya Edge ile açın. Tarayıcı menüsünden "Uygulamayı yükle" / "Bu siteyi uygulama olarak yükle" seçeneğini kullanın.
+## GitHub Pages'e yükleme
+1. GitHub'da `gulpinar-dernek-pwa` adlı **Public** bir repository oluşturun.
+2. ZIP içindeki dosyaları (klasörün kendisini değil, içindekileri) repository'nin kök dizinine yükleyin.
+3. Commit changes yapın.
+4. Repository > Settings > Pages bölümüne girin.
+5. Build and deployment altında Deploy from a branch seçin.
+6. Branch: `main`, Folder: `/(root)` seçip Save'e basın.
+7. Pages adresi yayınlandığında HTTPS üzerinden açın.
 
-## Not
-- `icons/gulpinar-logo.png` yüklenen orijinal logodur; dosya değiştirilmeden pakete kopyalanmıştır.
-- `icon-192.png` ve `icon-512.png`, PWA kurulum simgeleri için orijinal logodan üretilmiş ölçekli kopyalardır.
-- Yönetim sistemi Blogger sitesini yeni sekmede açar. Blogger içeriği ve yönetim işlemleri internet bağlantısı gerektirir.
-- Depoya üye bilgileri, T.C. kimlik numaraları, şifreler veya API anahtarları koymayın.
+## Bilgisayara yükleme
+1. GitHub Pages adresini Chrome veya Edge ile açın.
+2. Tarayıcıdaki yükle simgesini veya menüdeki "Uygulamayı yükle" seçeneğini kullanın.
+3. Uygulama adı Gülpınar Derneği olacaktır.
+
+## Önemli sınır
+Bu PWA, GitHub Pages üzerinde çalışan bağımsız bir uygulama kısayoludur. "Yönetim Sistemini Aç" düğmesi mevcut Blogger sistemini ayrı sekmede açar. Blogger'ın tüm yönetim ekranlarını bu PWA penceresinin içine gömmek, Blogger'ın çerçeve/güvenlik politikalarına bağlıdır ve bu paket bunu varsaymaz. PWA kabuğu çevrimdışı açılabilir; Blogger yönetim sistemi internet bağlantısı gerektirir.
+
+GitHub Pages herkese açık yayın yapar. Bu depoya şifre, API anahtarı, üye listesi, T.C. kimlik numarası veya özel dernek verisi koymayın.

@@ -2,24 +2,15 @@
   "id": "./",
   "name": "Gülpınar Derneği",
   "short_name": "Gülpınar",
-  "description": "Gülpınar Kültür Dayanışma ve Yardımlaşma Derneği Bilgi ve Yönetim Sistemi",
+  "description": "Gülpınar Derneği Bilgi ve Yönetim Sistemi",
+  "lang": "tr-TR",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f8f4eb",
-  "theme_color": "#10264a",
+  "background_color": "#f0fdf4",
+  "theme_color": "#14532d",
   "icons": [
-    {
-      "src": "./icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    {"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
   ]
 }
